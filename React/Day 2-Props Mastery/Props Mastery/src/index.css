@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #0f172a;
+    color:white;
+    padding: 40px;
+}
+.card{
+    width: 100px;
+    background:#1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.card h2{
+    padding: 10px;
+}
+.card p{
+    padding: 0 10px 15px;
+}
+.grid{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
