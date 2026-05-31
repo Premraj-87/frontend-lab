@@ -1,0 +1,21 @@
+/* index.css */
+
+.light-mode {
+  background: #fff;
+  color: #111;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.dark-mode {
+  background: #111;
+  color: #fff;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
