@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-        <h3>Made By Prem 💖</h3>
+        <h3> Made By Prem 💖</h3>
     </div>
   )
 }

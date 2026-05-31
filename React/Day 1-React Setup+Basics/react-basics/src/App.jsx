@@ -6,11 +6,16 @@
 */
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import About from "./components/About";
+import Skills from "./components/Skills";
+
 const App = () => {
   return (
-    <div>
-     <Header/>
-     <p>I am learning React.</p>
+    <div className="box">
+     <Header />
+     <About name="Prem" role="Frontend Developer"/>
+     <Skills/>
+     
      <Footer/>
     </div>
   )
