@@ -1,0 +1,22 @@
+export const users = [
+  { id: 1, name: "Prem", role: "Frontend Developer" },
+  { id: 2, name: "Rahul", role: "Backend Developer" },
+  { id: 3, name: "Aman", role: "Full Stack Developer" },
+  { id: 4, name: "Rohit", role: "UI Designer" },
+  { id: 5, name: "Sneha", role: "Project Manager" },
+  { id: 6, name: "Karan", role: "DevOps Engineer" },
+  { id: 7, name: "Neha", role: "QA Engineer" },
+  { id: 8, name: "Vikas", role: "Mobile App Developer" },
+  { id: 9, name: "Anjali", role: "Business Analyst" },
+  { id: 10, name: "Saurabh", role: "Database Administrator" },
+  { id: 11, name: "Meena", role: "Content Writer" },
+  { id: 12, name: "Deepak", role: "System Architect" },
+  { id: 13, name: "Pooja", role: "UI/UX Designer" },
+  { id: 14, name: "Arjun", role: "Cloud Engineer" },
+  { id: 15, name: "Ritika", role: "SEO Specialist" },
+  { id: 16, name: "Manish", role: "Security Analyst" },
+  { id: 17, name: "Divya", role: "Product Owner" },
+  { id: 18, name: "Sandeep", role: "Software Tester" },
+  { id: 19, name: "Komal", role: "Graphic Designer" },
+  { id: 20, name: "Nikhil", role: "Data Scientist" }
+];
