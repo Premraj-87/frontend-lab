@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function NoteForm() {
+function NoteForm({addNote}) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [category, setCategory] =
@@ -8,12 +8,17 @@ function NoteForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log({
+      
+    const newNote={
+      id:Date.now(),
       title,
       content,
-      category,
-    });
+      category
+    };
+    addNote(newNote);
+    setTitle("");
+    setContent("");
+    setCategory("Study");
   };
 
   return (
