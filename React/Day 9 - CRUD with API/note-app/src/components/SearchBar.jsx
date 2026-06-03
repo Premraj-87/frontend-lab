@@ -1,6 +1,15 @@
-const SearchBar = () => {
+const SearchBar = ({search,setSearch}) => {
   return (
-    <div>SearchBar</div>
+    <div>
+      <input 
+      type="text"
+      placeholder="Search notes..."
+      value={search}
+      onChange={(e)=>
+        setSearch(e.target.value)
+      }
+      />
+    </div>
   )
 }
 export default SearchBar

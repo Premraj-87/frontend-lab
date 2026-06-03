@@ -1,0 +1,17 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "title": "Learn React",
+      "content": "Practice useState",
+      "category": "Study"
+    },
+    {
+      "id": "5oClQt3P0vg",
+      "title": "Apple ",
+      "content": "Apple is Greate fruit",
+      "category": "Study"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

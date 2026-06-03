@@ -1,6 +1,7 @@
 function NotesList({
   notes,
-  deleteNote
+  deleteNote,
+  setEditingNote
 }) {
 
   if (notes.length === 0) {
@@ -26,6 +27,13 @@ function NotesList({
           >
             Delete
           </button>
+          <button
+  onClick={() =>
+    setEditingNote(note)
+  }
+>
+  Edit
+</button>
         </div>
       ))}
     </div>

@@ -1,25 +1,46 @@
-import { useState } from "react";
+/* eslint-disable react-hooks/set-state-in-effect */
+import { useEffect, useState } from "react";
 
-function NoteForm({addNote}) {
+function NoteForm({ addNote, editingNote,updateNote ,setEditingNote}) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [category, setCategory] =
-    useState("Study");
+  const [category, setCategory] = useState("Study");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-      
-    const newNote={
-      id:Date.now(),
-      title,
-      content,
-      category
-    };
-    addNote(newNote);
+    if(editingNote){
+      updateNote({
+        id:editingNote.id,
+        title,
+        content,
+        category
+      });
+    }
+    else{
+      addNote({
+        id:Date.now(),
+        title,
+        content,
+        category
+      })
+    }
     setTitle("");
     setContent("");
     setCategory("Study");
+    setEditingNote(null);
   };
+
+
+  //useEffect
+  useEffect(() => {
+  if (editingNote) {
+    // safe synchronous update
+    setTitle(editingNote.title);
+    setContent(editingNote.content);
+    setCategory(editingNote.category);
+  }
+}, [editingNote]);
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -27,41 +48,28 @@ function NoteForm({addNote}) {
         type="text"
         placeholder="Title"
         value={title}
-        onChange={(e) =>
-          setTitle(e.target.value)
-        }
+        onChange={(e) => setTitle(e.target.value)}
       />
 
       <textarea
         placeholder="Content"
         value={content}
-        onChange={(e) =>
-          setContent(e.target.value)
-        }
+        onChange={(e) => setContent(e.target.value)}
       />
 
-      <select
-        value={category}
-        onChange={(e) =>
-          setCategory(e.target.value)
-        }
-      >
-        <option value="Study">
-          Study
-        </option>
+      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <option value="Study">Study</option>
 
-        <option value="Work">
-          Work
-        </option>
+        <option value="Work">Work</option>
 
-        <option value="Personal">
-          Personal
-        </option>
+        <option value="Personal">Personal</option>
       </select>
 
       <button type="submit">
-        Add Note
-      </button>
+  {editingNote
+    ? "Update Note"
+    : "Add Note"}
+</button>
     </form>
   );
 }
