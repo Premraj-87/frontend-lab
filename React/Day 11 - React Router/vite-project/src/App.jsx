@@ -5,6 +5,7 @@ import Users from "./pages/Users";
 import AddUser from "./pages/AddUser";
 import EditUser from "./pages/EditUser";
 import Navbar from "./components/Navbar";
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/add-user" element={<AddUser />} />
 
         <Route path="/edit-user/:id" element={<EditUser />} />
+        <Route path="*" element ={<NotFound/>}/>
 
       </Routes>
         </div>

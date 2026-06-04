@@ -1,6 +1,8 @@
-const Home = () => {
-  return (
-    <div>Home</div>
-  )
+import { Navigate } from "react-router-dom";
+
+function Home() {
+
+  return <Navigate to="/users" />;
 }
-export default Home
+
+export default Home;
