@@ -19,7 +19,9 @@ export const createNote =
   async (note) => {
 
     const response =
-      await fetch(BASE_URL, {
+      await fetch(BASE_URL,
+         {
+
 
         method: "POST",
 

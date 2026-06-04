@@ -9,6 +9,7 @@ import {
   updateNoteApi,
   deleteNoteApi
 }
+//! ok
 from "./services/notesApi";
 const App = () => {
   const [notes, setNotes] = useState([]);
