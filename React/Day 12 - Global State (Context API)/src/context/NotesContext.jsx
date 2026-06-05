@@ -1,33 +1,64 @@
-/* eslint-disable react-refresh/only-export-components */
 import {
   createContext,
   useContext,
-  useState
+  useEffect,
+  useState,
 } from "react";
 
-export const NotesContext =
-  createContext();
+// Create Context
+const NotesContext = createContext();
 
-export const NotesProvider =
-({ children }) => {
+// Provider
+export const NotesProvider = ({ children }) => {
 
-  const [notes, setNotes] =
-    useState([]);
- 
-    //! Add Note Function
+  // Load Notes from LocalStorage
+  const [notes, setNotes] = useState(() => {
+
+    try {
+
+      const savedNotes =
+        localStorage.getItem("notes");
+
+      return savedNotes
+        ? JSON.parse(savedNotes)
+        : [];
+
+    } catch (error) {
+
+      console.error(
+        "Failed to load notes:",
+        error
+      );
+
+      return [];
+
+    }
+
+  });
+
+  // Add Note
   const addNote = (text) => {
 
+    const trimmedText = text.trim();
+
+    if (!trimmedText) return;
+
     const newNote = {
-      id: Date.now(),
-      text
+
+      id: crypto.randomUUID(),
+
+      text: trimmedText,
+
     };
 
     setNotes((prevNotes) => [
       ...prevNotes,
-      newNote
+      newNote,
     ]);
+
   };
 
+  // Delete Note
   const deleteNote = (id) => {
 
     setNotes((prevNotes) =>
@@ -38,18 +69,49 @@ export const NotesProvider =
 
   };
 
+  // Save Notes to LocalStorage
+  useEffect(() => {
+
+    localStorage.setItem(
+      "notes",
+      JSON.stringify(notes)
+    );
+
+  }, [notes]);
+
   return (
+
     <NotesContext.Provider
       value={{
         notes,
         addNote,
-        deleteNote
+        deleteNote,
       }}
     >
+
       {children}
+
     </NotesContext.Provider>
+
   );
+
 };
 
-export const useNotes = () =>
-  useContext(NotesContext);
+// Custom Hook
+// eslint-disable-next-line react-refresh/only-export-components
+export const useNotes = () => {
+
+  const context =
+    useContext(NotesContext);
+
+  if (!context) {
+
+    throw new Error(
+      "useNotes must be used inside NotesProvider"
+    );
+
+  }
+
+  return context;
+
+};

@@ -1,6 +1,8 @@
 import { useNotes } from "../context/NotesContext";
+import NoteItem from "./NoteItem";
 
 function NoteList() {
+
   const { notes } = useNotes();
 
   if (notes.length === 0) {
@@ -8,11 +10,20 @@ function NoteList() {
   }
 
   return (
+
     <div>
+
       {notes.map((note) => (
-        <div key={note.id}>{note.text}</div>
+
+        <NoteItem
+          key={note.id}
+          note={note}
+        />
+
       ))}
+
     </div>
+
   );
 }
 
