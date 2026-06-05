@@ -1,6 +1,9 @@
+import NoteForm from "./components/NoteForm"
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <NoteForm/>
+    </div>
   )
 }
 export default App
