@@ -1,6 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import useMovies from "../hooks/useMovies";
+import MovieGrid from "../components/movies/MovieGrid";
 
 const Home = () => {
   const {
@@ -11,30 +11,42 @@ const Home = () => {
   } = useMovies();
 
   useEffect(() => {
-    fetchMovies("batman");
+    fetchMovies("Hero");
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  if (loading) {
+    return (
+      <p className="animate-pulse">
+        Loading Movies...
+      </p>
+    );
+  }
+
+  if (error) {
+    return (
+      <p>
+        Error Loading Movies
+      </p>
+    );
+  }
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-6">
-        Trending Movies
+      <h2
+        className="
+        text-3xl
+        font-bold
+        mb-6
+        "
+      >
+        Trending  <p className="text-gray-500">
+  {movies.length} movies found
+</p>
+
       </h2>
-
-      {loading && (
-        <p>Loading...</p>
-      )}
-
-      {error && (
-        <p>{error}</p>
-      )}
-
-      <div>
-        {movies.map((movie) => (
-          <p key={movie.imdbID}>
-            {movie.Title}
-          </p>
-        ))}
-      </div>
+     
+      <MovieGrid movies={movies} />
     </div>
   );
 };
