@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import useMovies from "../hooks/useMovies";
 import MovieGrid from "../components/movies/MovieGrid";
-
+import SearchBar from "../components/movies/SearchBar";
 const Home = () => {
   const {
     movies,
@@ -46,6 +46,7 @@ const Home = () => {
 
       </h2>
      
+      <SearchBar onSearch={fetchMovies}/>
       <MovieGrid movies={movies} />
     </div>
   );
