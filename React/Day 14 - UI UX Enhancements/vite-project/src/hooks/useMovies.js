@@ -11,7 +11,11 @@ const useMovies = () => {
       setError(null);
 
       const data = await searchMovies(query);
-      setMovies(data.Search || []);
+     if (data.Response === "False") {
+  setMovies([]);
+  return;
+}
+setMovies(data.Search);
     } catch (err) {
       setError(err.message);
     } finally {
