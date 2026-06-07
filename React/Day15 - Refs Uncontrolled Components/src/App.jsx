@@ -1,9 +1,12 @@
-import Uncontrolled from "./uncontrolled";
+import Render from "./render";
+
+
 
 const App = () => {
   return (
     <div>
-      <Uncontrolled/>
+     <Render/>
+      
     </div>
   )
 }
