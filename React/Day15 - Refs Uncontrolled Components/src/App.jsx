@@ -1,19 +1,13 @@
-import { useEffect, useRef } from "react";
+function App() {
 
-const App = () => {
-  const inputRef =useRef(null);
-  useEffect(()=>{
-    inputRef.current.focus();
-  },[])
-  const handleFocus = ()=>{
-    inputRef.current.focus();
-  }
+  const goTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <div>
-
-      <input ref={inputRef} placeholder="Email"/>
-      <button onClick={handleFocus}>Focus input</button>
-    </div>
-  )
+    <button onClick={goTop}>
+      Top
+    </button>
+  );
 }
 export default App
