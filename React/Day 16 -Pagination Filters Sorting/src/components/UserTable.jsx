@@ -3,9 +3,9 @@ function UserTable({ users }) {
     <table border="1" cellPadding="10">
       <thead>
         <tr>
-          <th>ID </th>
-          <th>Name</th>
-          <th>Role</th>
+          <th>ID  </th>
+          <th>Name </th>
+          <th>Role </th>
           <th>Join Date</th>
         </tr>
       </thead>
