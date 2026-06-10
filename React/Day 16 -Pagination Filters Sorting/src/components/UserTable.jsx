@@ -6,7 +6,7 @@ function UserTable({ users }) {
           <th>ID  </th>
           <th>Name </th>
           <th>Role </th>
-          <th>Join Date</th>
+          <th>Join  Date</th>
         </tr>
       </thead>
 
