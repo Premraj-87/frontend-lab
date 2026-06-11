@@ -1,10 +1,6 @@
-import UserTable from "./components/UserTable";
-
 const App = () => {
   return (
-    <div>
-      <UserTable/>
-    </div>
+    <div>App</div>
   )
 }
 export default App
