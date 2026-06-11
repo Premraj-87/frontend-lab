@@ -1,6 +1,7 @@
 import { useState } from "react";
-import users from "../data/users";
+import {users} from "../data/users";
 import SearchBar from "../components/SearchBar";
+import UserTable from "../components/UserTable";
 
 const Dashboard = () => {
   //!Serach logic
@@ -20,6 +21,9 @@ const Dashboard = () => {
   return (
     <div>
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <UserTable
+ users={searchedUsers}
+/>
     </div>
   );
 };
