@@ -5,11 +5,15 @@ function SearchBar({
   return (
     <input
       type="text"
-      placeholder="Search User"
+      placeholder="Search users..."
       value={searchTerm}
       onChange={(e) =>
         setSearchTerm(e.target.value)
       }
+      style={{
+        padding: "10px",
+        width: "250px"
+      }}
     />
   );
 }
