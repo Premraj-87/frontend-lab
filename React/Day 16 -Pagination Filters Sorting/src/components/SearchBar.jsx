@@ -1,15 +1,17 @@
-const SearchBar = ({searchTerm,setSearchTerm}) => {
+function SearchBar({
+  searchTerm,
+  setSearchTerm
+}) {
   return (
-    <div>
-      <input 
+    <input
       type="text"
       placeholder="Search User"
       value={searchTerm}
-      onChange={(e)=>
+      onChange={(e) =>
         setSearchTerm(e.target.value)
       }
-      />
-    </div>
-  )
+    />
+  );
 }
-export default SearchBar
+
+export default SearchBar;
