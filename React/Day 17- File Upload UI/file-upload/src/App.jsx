@@ -1,8 +1,9 @@
+import ProfileUploader from "./components/ProfileUploader";
 
 function App() {
   return (
     <>
-      Appp
+    <ProfileUploader/>
     </>
   );
 }
