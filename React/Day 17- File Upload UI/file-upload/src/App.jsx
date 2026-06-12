@@ -1,6 +1,11 @@
-const App = () => {
+import BlogForm from "./components/BlogForm";
+
+function App() {
   return (
-    <div>App</div>
-  )
+    <>
+      <BlogForm />
+    </>
+  );
 }
-export default App
+
+export default App;
