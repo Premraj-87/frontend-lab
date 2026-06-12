@@ -1,9 +1,8 @@
-import BlogForm from "./components/BlogForm";
 
 function App() {
   return (
     <>
-      <BlogForm />
+      Appp
     </>
   );
 }
