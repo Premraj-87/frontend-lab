@@ -1,6 +1,12 @@
+import TodoPieChart from "./components/pie";
+
+
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+
+     <TodoPieChart/>
+    </div>
   )
 }
 export default App
