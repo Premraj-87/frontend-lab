@@ -1,12 +1,7 @@
-import TodoPieChart from "./components/pie";
+import Dashboard from "./pages/Dashboard";
 
-
-const App = () => {
-  return (
-    <div>
-
-     <TodoPieChart/>
-    </div>
-  )
+function App() {
+  return <Dashboard />;
 }
-export default App
+
+export default App;
