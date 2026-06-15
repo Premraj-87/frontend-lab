@@ -1,4 +1,7 @@
-*{
-    background-color: black;
-    color: white;
+body {
+  background-color:black;
+  font-family: Arial, sans-serif;
+  color:wheat;
+  margin: 0;
+  padding: 20px;
 }
