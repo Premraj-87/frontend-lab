@@ -1,7 +1,12 @@
+import Link from "next/link";
+
 const page = () => {
   return (
     <div>
-        <h1>This is blog page</h1>
+        <h1 className="flex flex-col">This is blog page
+          <Link href="/">Home Page</Link>
+        </h1>
+
     </div>
   )
 }
