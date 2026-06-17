@@ -7,10 +7,10 @@ const page = () => {
      <h2 className="border p-1 rounded inline-block">All Services</h2>
      <div className="service-cont border flex-col flex p-2 rounded">
       <Link href="/">App Development</Link>
-      <Link href="/">Web Development</Link>
+      <Link href="/services/web-dev">Web Development</Link>
       <Link href="/">Software Development</Link>
       <Link href="/">Dev Ops</Link>
-      <Link href="/">SEO</Link>
+      <Link href="/services/seo">SEO</Link>
 
      </div>
       <Link href="/">Home Page</Link>
