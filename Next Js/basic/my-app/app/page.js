@@ -4,7 +4,7 @@ export default  function Page() {
 
   return<>
   <div className="flex flex-col">
-  <h1 className="font-bold text-white">Welcome Prem</h1>
+  <h1 className="font-bold text-black">Welcome Prem now everything will run on updated version</h1>
   <Link href="/about">About</Link>
   <Link href="/blogs">blogs
   </Link>
