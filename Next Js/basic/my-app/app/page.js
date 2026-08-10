@@ -1,16 +1,13 @@
 import Link from "next/link";
 
-export default  function Page() {
+export default function Home() {
+
 
   return<>
   <div className="flex flex-col">
-  <h1 className="font-bold text-black">Welcome Prem now everything will run on updated version</h1>
-  <Link href="/about">About</Link>
-  <Link href="/blogs">blogs
-  </Link>
-  <Link href="/projects">projects</Link>
-  <Link href="/contact">contact</Link>
-  <Link href="/services">services</Link>
+  <Link href="/about" className="bg-blue-500 text-white p-2 m-2 rounded">About</Link>
+  <Link href="/blogs" className="bg-red-500 text-white p-2 m-2 rounded">Blogs</Link>
+  <Link href="/services" className="bg-green-500 text-white p-2 m-2 rounded">Services</Link>
   </div>
   </>
 }
